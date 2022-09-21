@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Instagram Feed con Bootstrap</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <i class="fa fa-instagram"></i> Instagram
+            </a>
+
+            <form class="d-flex d-grid gap-3" role="search">
+              <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a post</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Caption:
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <i class="fa fa-camera"></i> <i class="fa fa-map-pin"></i>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              
+              
+              <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-gear"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" type="button">Profile</a></li>
+                <li><a class="dropdown-item" type="button">Accesibility</a></li>
+                <li><a class="dropdown-item" type="button">Privacy and Data</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" type="button">LogOut</a></li>
+              </ul>
+            
+            </form>
+      
+        </div>
+          
+          <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <button type="button" class="btn btn-success">Create a post</button>
+
+          </div> -->
+        
+    </nav>
+
+      <!-- Puntitos -->
+      <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            <i class="fa fa-square"></i>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+            <i class="fa fa-square"></i>
+          </button>
+        </li>
+        
+      </ul>
+
+      <!-- Cards -->
+      <div class="tab-content d-flex justify-content-center" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+       
+            <br>
+            <div class="card" style="width: 25rem;">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <h5>Mi perro loco!</h5>
+                    <h6>26/08</h6>
+                  </div>
+                </div>
+                
+                <img src="./images/husky-siberiano.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text"><strong><i class="fa fa-heart"></i> 204 likes</strong></p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card" style="width: 25rem;">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <h5>Otro perro loco!</h5>
+                    <h6>23/08</h6>
+                  </div>
+                </div> 
+                <img src="./images/husky-siberiano-corre.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text"><strong><i class="fa fa-heart"></i> 100 likes</strong></p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card" style="width: 25rem;">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between">
+                    <h5>Y otro mas!!</h5>
+                    <h6>29/02</h6>
+                  </div>
+                </div>
+                <img src="./images/alask.jpg" class="card-img-top">
+                <div class="card-body">
+                  <p class="card-text"><strong><i class="fa fa-heart"></i> 27.000 likes</strong></p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+        </div>
+        
+        <br>
+
+        <!-- Posts -->
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="container text-center">
+                <div class="d-flex justify-content-center row-cols-3">
+                    <div class="col"><img class="img-thumbnail" src="./images/husky-siberiano-corre.jpg"></div>
+                    <div class="col"><img class="img-thumbnail" src="./images/husky-siberiano.jpg"></div>
+                    <div class="col"><img class="img-thumbnail" src="./images/alask.jpg"></div>
+                </div>
+
+                <div class="d-flex justify-content-center row-cols-3">
+                    <div class="col"><img class="img-thumbnail" src="./images/husky-siberiano.jpg"></div>
+                    <div class="col"><img class="img-thumbnail" src="./images/alask.jpg"></div>
+                    <div class="col"><img class="img-thumbnail" src="./images/husky-siberiano-corre.jpg"></div>
+                </div>
+
+                <div class="d-flex justify-content-center row-cols-3">
+                    <div class="col"><img class="img-thumbnail" src="./images/alask.jpg"></div>
+                    <div class="col"><img class="img-thumbnail" src="./images/husky-siberiano-corre.jpg"></div>
+                    <div class="col"><img class="img-thumbnail" src="./images/husky-siberiano.jpg"></div>
+                </div>
+            </div>
+    </div>
+      
+
+      
+
+    <!-- Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
